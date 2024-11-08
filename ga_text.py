@@ -1,6 +1,5 @@
 import random
 import string
-from collections import Counter
 import heapq
 
 POPULATION_SIZE = 100
@@ -122,9 +121,6 @@ valid_words = load_dictionary(dictionary_path)
 special_words = load_special_words(special_words_path)
 population = initialize_population()
 text = load_text_from_file(text_path)
-
-frequency_counts = Counter(text)
-most_common = frequency_counts.most_common()
 
 fitness_history = []
 for decoding_alphabet in population:
